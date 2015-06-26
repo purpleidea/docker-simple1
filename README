@@ -5,8 +5,8 @@ Here are some useful commands.
 
 docker images	# see what images exist
 docker ps	# see what's running
-docker run simple-app1	# run the container interactively
-cid=$(docker ps | grep simple-app1 | awk '{print $1}' | head -1)	# id
+docker run docker-simple1	# run the container interactively
+cid=$(docker ps | grep docker-simple1 | awk '{print $1}' | head -1)	# id
 cip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' $cid)
 wget -q $cip:8000/README -O -	# read output from file
 
